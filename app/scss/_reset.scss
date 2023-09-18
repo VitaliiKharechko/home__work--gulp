@@ -49,9 +49,14 @@ body {
   min-height: 100vh;
 }
 
-button {
+button,
+input,
+textarea {
   padding: 0;
   border: none;
+}
+
+button {
   background-color: transparent;
   cursor: pointer;
   outline: transparent;
@@ -60,8 +65,5 @@ button {
 
 input,
 textarea {
-  border: none;
-  font: inherit;
-  padding: 0;
   outline: transparent;
 }

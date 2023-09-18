@@ -1,0 +1,124 @@
+.popular {
+  text-align: center;
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 45px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 13px 32px;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 0px 0px 0px 1px $silver;
+    line-height: 1.5;
+    transition: background-color 1s, color 1s, box-shadow 1s;
+
+    &:hover {
+      background-color: rgba(255, 104, 56, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      color: $accent;
+
+      .popular__icon {
+        fill: $accent;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:active {
+      background-color: $white;
+      box-shadow: 0px -5px 12px 0px rgba(255, 104, 56, 0.2) inset;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    transition: fill 1s;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__card {
+    display: flex;
+  }
+
+  &__other {
+    text-decoration: underline;
+    transition: text-decoration-color 1s, color 1s, box-shadow 1s,
+      text-shadow 1s;
+
+    &:hover {
+      text-decoration-color: transparent;
+      border-bottom: $white;
+      color: $accent;
+    }
+
+    &:focus {
+      border-radius: 5px;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
+  }
+}
+
+.mixitup-control-active {
+  color: $white;
+  background-color: $accent;
+
+  .popular__icon {
+    fill: $white;
+  }
+}
+
+.card-food {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 210px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: $white;
+  padding: 20px 35px;
+  box-shadow: 0px 0px 0px 1px $white;
+  transition: box-shadow 1s;
+
+  &:hover {
+    box-shadow: 0px 0px 0px 1px $accent;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    text-align: center;
+    color: $dark;
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  &__cost {
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    padding: 7px 14px;
+  }
+}
