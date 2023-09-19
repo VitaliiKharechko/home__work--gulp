@@ -3,15 +3,6 @@
   z-index: 50;
   padding-bottom: 160px;
 
-  &--fixed {
-    background-color: transparent;
-
-    &:before {
-      background-color: $main;
-      z-index: -1;
-    }
-  }
-
   &__container {
     position: fixed;
     display: flex;
@@ -32,6 +23,14 @@
       background-color: transparent;
       z-index: -1;
       transition: background-color 0.3s ease-in;
+    }
+    &--fixed {
+      background-color: transparent;
+
+      &:before {
+        background-color: $main;
+        z-index: -1;
+      }
     }
   }
 }
